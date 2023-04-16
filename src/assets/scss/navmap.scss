@@ -1,0 +1,66 @@
+.wrapper_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    .list li {
+        border: 3px solid $dark-color;
+        padding: 20px 10px;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:first-child {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+}
+
+.lab {
+    background-color: #D7FF83;
+    color: black;
+}
+
+.ULK {
+    background-color: #FFFCA9;
+    color: black;
+}
+
+.Congress {
+    background-color: #FFB4E1;
+    color: black;
+}
+
+.Disit {
+    background-color: #F19E9E;
+    color: black;
+}
+
+.Museum {
+    background-color: #B0434A;
+    color: black;
+}
+
+.library {
+    background-color: #8CA5FF;
+    color: black;
+}
+
+.Main {
+    background-color: #FFD4A1;
+    color: black;
+}
+
+
+.back {
+    color: white;
+    background-color: $dark-color;
+}

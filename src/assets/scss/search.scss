@@ -1,0 +1,84 @@
+//Vars 
+:root {
+    --rad: 100px;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --font-fam: 'Lato', sans-serif;
+    --btn-width: 3rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  }
+  
+
+form {
+    position: relative;
+    width: 289px;
+    height: 50px;
+    background: $hover-purple-color;
+    border-radius: var(--rad);
+
+    input, button  {
+        font-family: $font-main;
+        border: 0;
+        height: 50px;
+        color: $dark-color;
+    }
+
+    input[type="search"] {
+        outline: 0;
+        width: 100%;
+        background: $white-color;
+        padding: 0 1.6rem;
+        border-radius: var(--rad);
+        appearance: none; 
+        transition: all var(--dur) var(--bez);
+        transition-property: width, border-radius;
+        z-index: 1;
+        position: relative;
+        font-size: 19px;
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration { 
+            display: none;
+        }
+    }
+
+
+    label {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+
+    button {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        width: var(--btn-width);
+        color: $white-color;
+        background: var(--color-brand);
+        border-radius: 0 var(--rad) var(--rad) 0;
+    }
+    
+    input:not(:placeholder-shown) {
+        border-radius: var(--rad) 0 0 var(--rad);
+        width: calc(100% - var(--btn-width));
+        + button {
+        display: block;
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;	
+	box-sizing: border-box;
+	padding: 12px 50px;
+	outline: none;
+    border: none;
+    border-radius: 100px;
+	text-decoration: none;
+	background-color: $white-color;
+    color: $dark-color;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+
+
+    &:hover {
+        transition: all 0.2s;
+        color: $white-color;
+        background-color: $hover-purple-color;
+
+    }
+    &:active {
+        color: $white-color;
+        background-color: $click-puple-color;
+    }
+}
