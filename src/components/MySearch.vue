@@ -1,6 +1,5 @@
 <template>
     <div class="wrapper">
-        <h2>Автопоиск совпадений при поиске</h2>
         <form @submit.prevent role="search">
             <label for="search">Search for stuff</label>
             <input v-model="SearchQuery" id="search" type="search" placeholder="Поиск..." autofocus />
@@ -11,7 +10,7 @@
                 </svg>
             </button>    
             <ul class="options">
-                <li @click="this.SearchQuery = item.name" v-for="item in updateList" :key="item.id">{{ item.name }}</li>
+                <li v-for="item in updateList" :key="item.name" @click="clickItem(item.name)">{{ item.name }}</li>
             </ul>
         </form>
     </div>
@@ -24,7 +23,8 @@ export default {
     data() {
         return {
             SearchQuery: '',
-            items: products
+            items: products,
+            nameItem: ''
         }
     },
 
@@ -33,11 +33,14 @@ export default {
             this.$emit('search', this.SearchQuery)
             this.SearchQuery = ''
         },
-
+        clickItem(e) {
+            this.SearchQuery = e
+            this.nameItem = e   
+        }
     },
     computed: {
         updateList: function() {
-            if (this.SearchQuery !== "") {
+            if (this.SearchQuery !== "" && this.SearchQuery !== this.nameItem) {
                 return this.items.filter(s => {
                     const regex = new RegExp(this.SearchQuery.toLowerCase(), 'gi')
                     return s.name.toLowerCase().match(regex)
