@@ -18,6 +18,8 @@
 </template>
 
 <script>
+'use strict' 
+
 import navbar from '@/components/navbar.vue';
 import MainMap from '@/components/MainMap.vue';
 import NavMap from '@/components/NavMap.vue';
@@ -31,7 +33,7 @@ export default {
     return {
       curSearch: '',
       MapId: 0,
-      NavId: 0
+      NavId: 0,
     }
   },
   methods: {

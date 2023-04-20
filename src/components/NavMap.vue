@@ -29,9 +29,9 @@ export default {
         }
     },
     methods: {
-        isHover(e) {
-            this.$emit('getNavId', e)
-            const newArr = this.arr.filter(el => el.id != e)
+        isHover(liId) {
+            this.$emit('getNavId', liId)
+            const newArr = this.arr.filter(el => el.id != liId)
 
             newArr.forEach(e => {
                 document.querySelector(`.${e.class}`).classList.add('back')
@@ -39,9 +39,9 @@ export default {
 
         },
 
-        isNotHover(e) {
+        isNotHover(liId) {
             this.$emit('getNavId', "")
-            const newArr = this.arr.filter(el => el.id != e)
+            const newArr = this.arr.filter(el => el.id != liId)
 
             newArr.forEach(e => {
                 document.querySelector(`.${e.class}`).classList.remove('back')
