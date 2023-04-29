@@ -1,7 +1,7 @@
 <template>
     <svg width="678" height="705" viewBox="0 0 678 885" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_77_200)">
-            <g class="g" id="1" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="1"  @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M652.971 661.513H588.044L595.259 675.613H663.464L652.971 661.513Z" fill="#86C66F"/>
                 <path d="M663.464 675.613H595.258L596.57 874H665.104L663.464 675.613Z" fill="#A2E48A"/>
                 <path d="M596.57 874L589.028 842.52L588.044 661.513L595.259 675.613L596.57 874Z" fill="#719A62"/>
@@ -10,14 +10,14 @@
             <path d="M588.7 801.203L592.635 804.81L536.89 805.794V801.203H588.7Z" fill="#585858"/>
             <path d="M592.635 842.193H536.89V805.786L592.635 804.811V842.193Z" fill="#878787"/>
 
-            <g class="g" id="2" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="2" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M288.66 152.921L295.219 132.918L300.793 142.427L293.907 161.774L288.66 152.921Z" fill="#C582AA"/>
                 <path d="M185.04 123.409L183.401 117.507L275.216 148.003L273.248 153.905L185.04 123.409Z" fill="#BC83A5"/>
                 <path d="M219.799 7L183.401 117.506L288.988 152.593L326.042 40.775L219.799 7Z" fill="#FFB4E1"/>
                 <path d="M327.682 45.0382L326.042 40.7754L324.731 44.0545L327.682 45.0382Z" fill="#C582AA"/>
             </g>
 
-            <g class="g" id="3" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="3" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M208.978 743.491L218.815 736.604L243.081 799.236L536.89 797.268L537.218 810.713L235.211 811.696L208.978 743.491Z" fill="#BFA27F"/>
                 <path d="M161.758 296.219L172.579 300.81L84.0432 574.616L143.723 627.41L132.574 635.608L69.2871 577.895L161.758 296.219Z" fill="#BFA27F"/>
                 <path d="M277.511 857.276L269.313 867.441V847.767H277.511V857.276Z" fill="#BFA27F"/>
@@ -27,12 +27,12 @@
                 <path d="M208.978 848.095L178.81 767.756L102.406 659.545L25.6747 589.7L6 583.142L21.7398 534.283L41.0866 540.185L56.8264 498.212L35.84 490.67L49.6123 448.37L69.615 454.6L85.0268 410.988L64.6963 404.101L78.4686 361.473L98.1433 366.719L111.26 328.354L91.2572 320.812L105.685 277.527L161.758 296.218L69.615 578.223L132.574 635.28L359 475.5L434.909 583.142L209.633 743.819L235.211 810.713H442.451H460.158H537.218V867.441H485.736V847.111H449.009V867.441H396.216V848.095H358.834V867.441H307.023V848.095H269.314V867.441H208.978V848.095Z" fill="#FFD4A1"/>
             </g>
             
-            <g class="g" id="4" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="4" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M437.86 749.394L442.451 810.713H460.158L454.912 745.131L521.15 724.472L518.199 716.275L498.524 656.267L393.592 688.074L415.562 756.608L437.86 749.394Z" fill="#B0434A"/>
                 <path d="M396.543 683.155L393.592 688.074L498.524 656.266L494.917 652.659L396.543 683.155Z" fill="#782F33"/>
             </g>
 
-            <g class="g" id="5" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="5" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M249.639 469.028L251.606 551.99L266.362 541.497L264.723 449.025L307.679 382.459L264.723 355.57L202.092 452.632L243.408 479.193L249.639 469.028Z" fill="#F19E9E"/>
                 <path d="M249.967 482.473C247.999 481.38 243.671 479.456 243.408 479.194L249.639 469.028L249.967 482.473Z" fill="#AE6E6E"/>
                 <path d="M264.395 449.354L266.362 540.841L272.265 536.578L270.953 446.402L310.958 383.115H307.351L264.395 449.354Z" fill="#AE6E6E"/>
@@ -41,14 +41,14 @@
             <path d="M143.723 247.359L130.935 285.725L148.97 291.955L162.414 253.262L143.723 247.359Z" fill="#878787"/>
             <path d="M162.414 253.262L148.97 291.955L155.528 294.251L166.021 262.771L162.414 253.262Z" fill="#585858"/>
             
-            <g class="g" id="6" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="6" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M281.118 291.3L116.178 238.506L139.46 173.252L303.416 225.39L281.118 291.3Z" fill="#8CA5FF"/>
                 <path d="M166.021 262.772L162.414 253.263L281.446 290.973L298.498 304.745L166.021 262.772Z" fill="#50619D"/>
                 <path d="M281.118 290.972L303.416 225.39L319.156 244.736L298.17 304.417L281.118 290.972Z" fill="#6279CC"/>
                 <path d="M132.574 247.36L116.178 238.507L143.723 247.36L142.739 250.968L132.574 247.36Z" fill="#50619D"/>
             </g>
 
-            <g class="g" id="7" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
+            <g class="g" id="7" @click="thisPage($event.target.parentElement.id)" @mouseover="isyeHover($event.target.parentElement.id)" @mouseout="isnotHover($event.target.parentElement.id)">
                 <path d="M506.722 104.718L482.784 172.596V203.091L505.738 142.1L506.722 104.718Z" fill="#EAE7A5"/>
                 <path d="M506.722 104.39L301.121 36.1846L277.511 103.734L482.785 172.596L506.722 104.39Z" fill="#FFFCA9"/>
                 <path d="M300.793 142.428L277.511 103.734L482.785 172.596V203.092L300.793 142.428Z" fill="#D9D690"/>
@@ -150,6 +150,11 @@ export default {
                     g.children[i].classList.remove(e.class[`path${i+1}`])
                 }
             })
+        },
+        thisPage(e) {
+            const newArr = this.arr.filter(el => el.id == e) 
+            this.$router.push(`/${newArr[0].name}`)
+            this.isnotHover(e)
         }
     },
     updated() {
