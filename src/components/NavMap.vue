@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper_flex">
     <ul class="list">
-        <li v-for="item in arr" :id="item.id" @mouseout="isNotHover($event.target.id)" @mouseover="isHover($event.target.id)" :class="item.class" :key="item.id">
+        <li v-for="item in arr" :id="item.id" @mouseout="isNotHover($event.target.id)" @click="$router.push(`/${item.name}`), isNotHover($event.target.id)" @mouseover="isHover($event.target.id)" :class="item.class" :key="item.id">
             {{ item.name }}
         </li>
     </ul>

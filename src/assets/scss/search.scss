@@ -1,6 +1,6 @@
 //Vars 
 :root {
-    --rad: 100px;
+    --rad: 70px;
     --dur: .3s;
     --color-dark: #2f2f2f;
     --color-light: #fff;
@@ -84,30 +84,27 @@ form {
 
     & li {
         cursor: pointer;
-        background-color: $white-color;
+        // background-color: $white-color;
         list-style: none;
         font-size: 25px;
         box-shadow: 0 0 10px rgba($hover-purple-color, $alpha: 0.4);
-        max-width: 93%;
+        max-width: 84%;
         margin: 0 auto;
         color: $dark-color;
         padding: 18px;
-        border-left: 3px solid $hover-purple-color;
-        border-right: 3px solid $hover-purple-color;
+        // border-left: 3px solid $dark-color;
+        // border-right: 3px solid $dark-color;
         text-transform: capitalize;
 
         &:first-child {
-            border-top: 3px solid $hover-purple-color;
+            margin-top: 5px;
+            box-shadow: 0 0 70px rgba($hover-purple-color, $alpha: 0.4);
         }
 
         &:last-child {
-            border-bottom: 3px solid $hover-purple-color;
+            // border-bottom: 3px solid $dark-color;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
-        }
-
-        &:hover {
-            background-color: red;
         }
     }
 }

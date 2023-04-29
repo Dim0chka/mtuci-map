@@ -19,10 +19,8 @@
 }
 
 .hystmodal__window {
-    background: rgba($color: #000000, $alpha: 0);
     width: 600px;
     max-width: 100%;
-
     transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
     transform: scale(1);
 }

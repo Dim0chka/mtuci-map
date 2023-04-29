@@ -1,8 +1,9 @@
 .btn {
     display: inline-block;	
 	box-sizing: border-box;
-	padding: 12px 50px;
+	padding: 12px 30px;
 	outline: none;
+    display: flex;
     border: none;
     border-radius: 100px;
 	text-decoration: none;
@@ -20,6 +21,9 @@
         color: $white-color;
         background-color: $hover-purple-color;
 
+        .activeSvg {
+            stroke: white;
+        }
     }
     &:active {
         color: $white-color;

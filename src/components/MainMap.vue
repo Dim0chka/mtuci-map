@@ -170,23 +170,7 @@ export default {
                 }
             })
         }
-        console.log(this.curSearch)
-        // if (this.CurrSearch != '') {
-        //     const newArr = this.arr.filter(element => element.name != this.CurrSearch)
-        //     newArr.forEach(e => {
-        //         const g = document.getElementById(`${e.id}`)
-        //         for(let i = 0; i < g.children.length; i++) {
-        //             g.children[i].classList.add(e.class[`path${i+1}`])
-        //         }
-        //     })
-
-        //     setTimeout(this.isnotHover, 2000)
-        // }
     }
 }
 
 </script>
-
-<style>
-
-</style>

@@ -2,7 +2,7 @@
     <div class="wrapper">
         <form @submit.prevent role="search">
             <label for="search">Search for stuff</label>
-            <input v-model="SearchQuery" id="search" type="search" placeholder="Поиск..." autofocus />
+            <input v-model="SearchQuery" id="search" type="search" placeholder="Поиск..." autofocus autocomplete="off"/>
             <button @click="sendSearch">
                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 19.5C15.4183 19.5 19 15.9183 19 11.5C19 7.08172 15.4183 3.5 11 3.5C6.58172 3.5 3 7.08172 3 11.5C3 15.9183 6.58172 19.5 11 19.5Z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -10,7 +10,7 @@
                 </svg>
             </button>    
             <ul class="options">
-                <li v-for="item in updateList" :key="item.name" @click="clickItem(item.name)">{{ item.name }}</li>
+                <li v-for="item in updateList" :class="item.class" :key="item.name" @mouseover="AddHoverItem(item.id)" @mouseout="RemHoverItem(item.id)" @click="clickItem(item.name)">{{ item.name }}</li>
             </ul>
         </form>
     </div>
@@ -30,12 +30,28 @@ export default {
 
     methods: {
         sendSearch() {
+            this.$router.push(`/${this.SearchQuery}`)
             this.$emit('search', this.SearchQuery)
             this.SearchQuery = ''
+            
         },
         clickItem(e) {
             this.SearchQuery = e
             this.nameItem = e   
+        },
+        AddHoverItem(e) {
+            (this.items.filter(obj => obj.id != e)).forEach(el => {
+                const listItem = document.querySelector(`.options .${el.class}`)
+                if (listItem != null) {
+                    listItem.classList.add('back2') 
+                }
+            })
+        },
+        RemHoverItem(e) {
+            this.items.forEach(el => {
+                const listItem = document.querySelector(`.options .${el.class}`)
+                if (listItem != null) listItem.classList.remove('back2') 
+            })
         }
     },
     computed: {
@@ -50,7 +66,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
