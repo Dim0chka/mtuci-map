@@ -13,6 +13,11 @@ module.exports = {
   }
 }
 
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/mtuci-map/'
+    : '/'
+}
 
 // vue.config.js
 const path = require('path')
